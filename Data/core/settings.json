@@ -1,0 +1,50 @@
+{
+    "0": {
+        "GLOBAL": {
+            "schema_version": 1,
+            "token": "NjQyOTgxMTU3ODM0ODUwMzA0.Xce1NA.628TPmQrVp1W5pXFPN-X4ZjPowQ",
+            "prefix": [
+                "?"
+            ],
+            "packages": [
+                "trivia",
+                "cryptic",
+                "werewolf"
+            ],
+            "help": {
+                "show_hidden": false
+            }
+        },
+        "CUSTOM_GROUPS": {
+            "Core": {
+                "0": {
+                    "CUSTOM_GROUPS": 2
+                }
+            },
+            "CogManager": {
+                "2938473984732": {}
+            },
+            "Bank": {
+                "384734293238749": {}
+            },
+            "Trivia": {
+                "3015763027": {}
+            },
+            "ModLog": {
+                "1354799444": {
+                    "CASETYPES": 1,
+                    "CASES": 2
+                }
+            },
+            "Wolfram": {
+                "2788801004": {}
+            },
+            "Hangman": {
+                "1049711010310997110": {}
+            },
+            "Werewolf": {
+                "87101114101119111108102": {}
+            }
+        }
+    }
+}

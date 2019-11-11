@@ -1,0 +1,110 @@
+[2019-11-10 18:17:55] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 18:19:17] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 18:21:20] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 18:23:41] [INFO] red.main: Keyboard interrupt detected. Quitting...
+[2019-11-10 18:24:43] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 18:29:19] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 18:33:04] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 105, in _load
+    self._cleanup_and_refresh_modules(spec.name)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 146, in _cleanup_and_refresh_modules
+    maybe_reload(m)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 141, in maybe_reload
+    importlib._bootstrap._exec(lib.__spec__, lib)
+  File "<frozen importlib._bootstrap>", line 630, in _exec
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 859, in get_code
+  File "<frozen importlib._bootstrap_external>", line 916, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/cogs/cryptic/cryptic.py'
+[2019-11-10 18:33:39] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 105, in _load
+    self._cleanup_and_refresh_modules(spec.name)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 146, in _cleanup_and_refresh_modules
+    maybe_reload(m)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 141, in maybe_reload
+    importlib._bootstrap._exec(lib.__spec__, lib)
+  File "<frozen importlib._bootstrap>", line 630, in _exec
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 859, in get_code
+  File "<frozen importlib._bootstrap_external>", line 916, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/cogs/cryptic/cryptic.py'
+[2019-11-10 18:35:02] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 105, in _load
+    self._cleanup_and_refresh_modules(spec.name)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 146, in _cleanup_and_refresh_modules
+    maybe_reload(m)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 141, in maybe_reload
+    importlib._bootstrap._exec(lib.__spec__, lib)
+  File "<frozen importlib._bootstrap>", line 630, in _exec
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 859, in get_code
+  File "<frozen importlib._bootstrap_external>", line 916, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/cogs/cryptic/cryptic.py'
+[2019-11-10 18:35:30] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 18:51:59] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 296, in load_extension
+    raise discord.ClientException(f"extension {name} does not have a setup function")
+discord.errors.ClientException: extension cryptic does not have a setup function
+[2019-11-10 19:05:03] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/aikaterna-cogs/dictionary/__init__.py", line 1, in <module>
+    from .dictionary import Dictionary
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/aikaterna-cogs/dictionary/dictionary.py", line 2, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+[2019-11-11 10:15:38] [INFO] red.main: Keyboard interrupt detected. Quitting...
+[2019-11-11 12:10:27] [INFO] red.main: Keyboard interrupt detected. Quitting...
