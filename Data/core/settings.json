@@ -2,14 +2,12 @@
     "0": {
         "GLOBAL": {
             "schema_version": 1,
-            "token": "NjQyOTgxMTU3ODM0ODUwMzA0.Xce1NA.628TPmQrVp1W5pXFPN-X4ZjPowQ",
+            "token": "<YOUR LIVE TOKEN HERE>",
             "prefix": [
                 "?"
             ],
             "packages": [
-                "trivia",
-                "cryptic",
-                "werewolf"
+                "trivia"
             ],
             "help": {
                 "show_hidden": false

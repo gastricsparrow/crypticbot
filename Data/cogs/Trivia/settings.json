@@ -3,31 +3,46 @@
         "MEMBER": {
             "601608082187091978": {
                 "226378264828968961": {
-                    "wins": 1,
-                    "games": 3,
-                    "total_score": 14
+                    "wins": 2,
+                    "games": 5,
+                    "total_score": 27
                 }
             },
             "560352591234465793": {
                 "226378264828968961": {
-                    "wins": 9,
-                    "games": 24,
-                    "total_score": 159
+                    "wins": 16,
+                    "games": 48,
+                    "total_score": 297
                 },
                 "378413022798151681": {
-                    "wins": 5,
-                    "games": 20,
-                    "total_score": 141
+                    "wins": 11,
+                    "games": 44,
+                    "total_score": 286
                 },
                 "202428607610486786": {
                     "wins": 3,
-                    "games": 5,
-                    "total_score": 38
+                    "games": 6,
+                    "total_score": 39
                 },
                 "203781832200683520": {
                     "wins": 6,
                     "games": 12,
                     "total_score": 76
+                },
+                "252062256177741835": {
+                    "wins": 1,
+                    "games": 2,
+                    "total_score": 13
+                },
+                "223690990882390017": {
+                    "wins": 13,
+                    "games": 21,
+                    "total_score": 175
+                },
+                "259929610546839553": {
+                    "wins": 0,
+                    "games": 1,
+                    "total_score": 7
                 }
             }
         }

@@ -108,3 +108,17 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'bs4'
 [2019-11-11 10:15:38] [INFO] red.main: Keyboard interrupt detected. Quitting...
 [2019-11-11 12:10:27] [INFO] red.main: Keyboard interrupt detected. Quitting...
+[2019-11-11 19:31:13] [ERROR] red: Failed to load package cryptic
+Traceback (most recent call last):
+  File "C:\Users\cemalk\AppData\Roaming\Python\Python37\site-packages\redbot\core\events.py", line 71, in on_ready
+    await bot.load_extension(spec)
+  File "C:\Users\cemalk\AppData\Roaming\Python\Python37\site-packages\redbot\core\bot.py", line 289, in load_extension
+    name = spec.name.split(".")[-1]
+AttributeError: 'NoneType' object has no attribute 'name'
+[2019-11-11 19:31:13] [ERROR] red: Failed to load package werewolf
+Traceback (most recent call last):
+  File "C:\Users\cemalk\AppData\Roaming\Python\Python37\site-packages\redbot\core\events.py", line 71, in on_ready
+    await bot.load_extension(spec)
+  File "C:\Users\cemalk\AppData\Roaming\Python\Python37\site-packages\redbot\core\bot.py", line 289, in load_extension
+    name = spec.name.split(".")[-1]
+AttributeError: 'NoneType' object has no attribute 'name'
