@@ -45,6 +45,11 @@
                     "total_score": 7
                 }
             }
+        },
+        "GUILD": {
+            "560352591234465793": {
+                "payout_multiplier": 0.5
+            }
         }
     }
 }
