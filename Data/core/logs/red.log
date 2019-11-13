@@ -122,3 +122,4 @@ Traceback (most recent call last):
   File "C:\Users\cemalk\AppData\Roaming\Python\Python37\site-packages\redbot\core\bot.py", line 289, in load_extension
     name = spec.name.split(".")[-1]
 AttributeError: 'NoneType' object has no attribute 'name'
+[2019-11-13 11:32:04] [CRITICAL] red.main: This token doesn't seem to be valid.
