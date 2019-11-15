@@ -17,11 +17,12 @@ T_ = Translator("TriviaSession", __file__)
 
 _ = lambda s: s
 _REVEAL_MESSAGES = (
-    _("Bruh, really? It's {answer}!"),
-    _("EZPZ lemon squeezy: {answer}."),
+    _("Bruh, you didn't know this? It's {answer}!"),
+    _("{answer}! How do you not know this?!"),
+    _("Ezpz, lemon squeezy. It's {answer}."),
     _("{answer} is what you were looking for."),
     _("It was, of course, {answer}."),
-    _("Oops, too late. It is {answer}."),
+    _("Oops, time's up. It is {answer}."),
     _("The answer is... {answer}!"),
 )
 _FAIL_MESSAGES = (

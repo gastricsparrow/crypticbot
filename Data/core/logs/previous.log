@@ -1,1 +1,173 @@
-[2019-11-13 11:32:04] [CRITICAL] red.main: This token doesn't seem to be valid.
+[2019-11-13 22:09:07] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 1, in <module>
+    from .cryptic import Cryptic
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 13, in <module>
+    class Cryptic(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 92, in Cryptic
+    @cryptic.command(name="help")
+AttributeError: 'Command' object has no attribute 'command'
+[2019-11-13 22:09:39] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 1, in <module>
+    from .cryptic import Cryptic
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 13, in <module>
+    class Cryptic(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 109, in Cryptic
+    @checks.mod_or_permissions(administrator=True)
+NameError: name 'checks' is not defined
+[2019-11-13 22:10:31] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 302, in load_extension
+    lib.setup(self)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 4, in setup
+    bot.add_cog(Cryptic())
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 17, in __init__
+    self._all_clues = self._load_clues()
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 21, in _load_clues
+    with open('data/cryptics.yaml', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/cryptics.yaml'
+[2019-11-13 22:10:57] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 302, in load_extension
+    lib.setup(self)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 4, in setup
+    bot.add_cog(Cryptic())
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 17, in __init__
+    self._all_clues = self._load_clues()
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 21, in _load_clues
+    with open('./data/cryptics.yaml', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './data/cryptics.yaml'
+[2019-11-13 22:16:40] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 1, in <module>
+    from .cryptic import Cryptic
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 14, in <module>
+    class Cryptic(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 22, in Cryptic
+    def _load_clues(self) -> List[pathlib.Path]:
+NameError: name 'List' is not defined
+[2019-11-13 22:29:14] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 302, in load_extension
+    lib.setup(self)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 4, in setup
+    bot.add_cog(Cryptic())
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 19, in __init__
+    self._all_clues = self._load_clues()
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 24, in _load_clues
+    with open('cryptics.yaml', 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'cryptics.yaml'
+[2019-11-13 22:34:00] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 302, in load_extension
+    lib.setup(self)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 4, in setup
+    bot.add_cog(Cryptic())
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 19, in __init__
+    self._all_clues = self._load_clues()
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 25, in _load_clues
+    with open(path + 'cryptics.yaml', 'r', encoding='utf-8') as f:
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+[2019-11-13 22:34:38] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 41, in cryptic
+    ans = self._all_clues[clue]
+KeyError: None
+[2019-11-13 22:35:54] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 41, in cryptic
+    clue = random.choice(self._all_clues.keys())
+KeyError: None
+[2019-11-13 22:36:12] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 42, in cryptic
+    ans = self._all_clues[clue]
+KeyError: None
+[2019-11-13 22:36:46] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 42, in cryptic
+    ans = self._all_clues[clue]
+KeyError: None
+[2019-11-13 22:36:53] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 41, in cryptic
+    clue = random.choice(self._all_clues.keys())
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/random.py", line 262, in choice
+    return seq[i]
+TypeError: 'dict_keys' object does not support indexing
+[2019-11-13 22:37:15] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 54, in cryptic
+    continue_ = await self.wait_for_answer(ans, 0)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 78, in wait_for_answer
+    message = await self.ctx.bot.wait_for(
+AttributeError: 'Cryptic' object has no attribute 'ctx'
+[2019-11-13 22:38:37] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 55, in cryptic
+    continue_ = await self.wait_for_answer(ans, 0)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 80, in wait_for_answer
+    "message", check=self.check_answer(answer), timeout=delay
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 96, in check_answer
+    def _pred(message: discord.Message):
+NameError: name 'discord' is not defined
+[2019-11-13 22:39:33] [INFO] red.main: Keyboard interrupt detected. Quitting...

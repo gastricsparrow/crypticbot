@@ -10,10 +10,10 @@ from redbot.core.utils.chat_formatting import box, bold, humanize_list
 from redbot.core.utils.common_filters import normalize_smartquotes
 
 
-_DERISIVE_TEXT = [
-    "I have no equal to hang out with...",
-    "Does anyone want to try this cryptic?",
-    "Any clue?",
+_SOLVING_SOUND_BITES = [
+    "Hmm... that should do it!",
+    "Every puzzle has an answer!",
+    "?",
     "Any idea what this clue might mean?",
     "OwO what's this?",
     "Can you solve this?",

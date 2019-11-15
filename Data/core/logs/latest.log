@@ -1,0 +1,195 @@
+[2019-11-13 22:48:12] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 1, in <module>
+    from .cryptic import Cryptic
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 26, in <module>
+    class Cryptic(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 115, in Cryptic
+    @cryptic.command(name="help")
+AttributeError: 'Command' object has no attribute 'command'
+[2019-11-13 22:55:00] [ERROR] red: Exception in command 'help'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
+    await destination.send(page)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 586, in red_help
+    await ctx.bot.send_help_for(ctx, thing_to_get_help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
+    return await self._help_formatter.send_help(ctx, help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 88, in send_help
+    await self.format_bot_help(ctx)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 427, in format_bot_help
+    await self.send_pages(ctx, pages, embed=False)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
+    "I couldn't send the help message to you in DM. "
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+[2019-11-13 22:58:02] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 67, in cryptic
+    continue_ = await self.wait_for_answer(ans, 500)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 102, in wait_for_answer
+    bold(f'{clue} ({ans_len})') + '\n\n'
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 220, in request
+    raise NotFound(r, data)
+discord.errors.NotFound: 404 NOT FOUND (error code: 10003): Unknown Channel
+[2019-11-13 23:05:29] [ERROR] red: Exception in command 'help'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
+    await destination.send(page)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 586, in red_help
+    await ctx.bot.send_help_for(ctx, thing_to_get_help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
+    return await self._help_formatter.send_help(ctx, help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 88, in send_help
+    await self.format_bot_help(ctx)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 427, in format_bot_help
+    await self.send_pages(ctx, pages, embed=False)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
+    "I couldn't send the help message to you in DM. "
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+[2019-11-13 23:05:46] [ERROR] red: Exception in command 'trivia'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
+    await destination.send(page)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/trivia2/trivia.py", line 182, in trivia
+    await ctx.send_help()
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 71, in send_help
+    await self.bot.send_help_for(self, command)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
+    return await self._help_formatter.send_help(ctx, help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 106, in send_help
+    await self.format_command_help(ctx, help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 233, in format_command_help
+    await self.send_pages(ctx, pages, embed=False)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
+    "I couldn't send the help message to you in DM. "
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+[2019-11-13 23:15:48] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 57, in cryptic
+    ans_len = ', '.join([len(a) for a in ans.split()])
+TypeError: sequence item 0: expected str instance, int found
+[2019-11-13 23:21:20] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 63, in cryptic
+    await ctx.send(text + "\n\n" + bold(f'{clue} ({ans_len})'))
+UnboundLocalError: local variable 'text' referenced before assignment
+[2019-11-13 23:22:26] [ERROR] red: Exception in command 'help'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
+    await destination.send(page)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 586, in red_help
+    await ctx.bot.send_help_for(ctx, thing_to_get_help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
+    return await self._help_formatter.send_help(ctx, help_for)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 88, in send_help
+    await self.format_bot_help(ctx)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 427, in format_bot_help
+    await self.send_pages(ctx, pages, embed=False)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
+    "I couldn't send the help message to you in DM. "
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
+    return await super().send(content=content, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
+[2019-11-14 21:08:51] [ERROR] red: Exception in command 'cryptic'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 72, in cryptic
+    text = random.choice(STARTING_TEXTS)
+NameError: name 'STARTING_TEXTS' is not defined
