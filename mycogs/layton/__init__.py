@@ -1,4 +1,4 @@
-from .cryptic import Cryptic
+from .layton import Layton
 
 def setup(bot):
-    bot.add_cog(Cryptic())
+    bot.add_cog(Layton())

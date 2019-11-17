@@ -1,4 +1,20 @@
-[2019-11-13 22:48:12] [ERROR] red: Package loading failed
+[2019-11-15 22:54:16] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 68, in layton
+    self._current_puzzle = grab_puzzle(id_)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 256, in grab_puzzle
+    sol_txts += p.get_text(),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+[2019-11-15 23:10:58] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 76, in layton
+    "\n" + f"*This is puzzle {self._current_puzzle['number']} from {self._current_puzzle['game']}. ID: {self._current_puzzle['id']}*")
+KeyError: 'id'
+[2019-11-16 03:04:34] [ERROR] red: Package loading failed
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
     await bot.load_extension(spec)
@@ -12,184 +28,289 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/__init__.py", line 1, in <module>
-    from .cryptic import Cryptic
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 26, in <module>
-    class Cryptic(commands.Cog):
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 115, in Cryptic
-    @cryptic.command(name="help")
-AttributeError: 'Command' object has no attribute 'command'
-[2019-11-13 22:55:00] [ERROR] red: Exception in command 'help'
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/__init__.py", line 1, in <module>
+    from .layton import Layton
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 170
+    async def layton_solve(self, ctx: commands.Context, *puzzle_id : str = None):
+                                                                         ^
+SyntaxError: invalid syntax
+[2019-11-16 03:05:04] [ERROR] red: Package loading failed
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
-    await destination.send(page)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
-    ret = await coro(*args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 586, in red_help
-    await ctx.bot.send_help_for(ctx, thing_to_get_help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
-    return await self._help_formatter.send_help(ctx, help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 88, in send_help
-    await self.format_bot_help(ctx)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 427, in format_bot_help
-    await self.send_pages(ctx, pages, embed=False)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
-    "I couldn't send the help message to you in DM. "
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-[2019-11-13 22:58:02] [ERROR] red: Exception in command 'cryptic'
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/__init__.py", line 1, in <module>
+    from .layton import Layton
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 41, in <module>
+    class Layton(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 169, in Layton
+    @cryptic.command(name='solve')
+NameError: name 'cryptic' is not defined
+[2019-11-16 03:06:32] [ERROR] red: Exception in command 'layton solve'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 67, in cryptic
-    continue_ = await self.wait_for_answer(ans, 500)
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 102, in wait_for_answer
-    bold(f'{clue} ({ans_len})') + '\n\n'
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 220, in request
-    raise NotFound(r, data)
-discord.errors.NotFound: 404 NOT FOUND (error code: 10003): Unknown Channel
-[2019-11-13 23:05:29] [ERROR] red: Exception in command 'help'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
-    await destination.send(page)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-
-During handling of the above exception, another exception occurred:
-
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 177, in layton_solve
+    puzzle = grab_puzzle(puzzle_id)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 201, in grab_puzzle
+    'URL': "https://layton.fandom.com/wiki/Puzzle:" + puzzle_id
+TypeError: can only concatenate str (not "tuple") to str
+[2019-11-16 03:08:09] [ERROR] red: Exception in command 'layton solve'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 586, in red_help
-    await ctx.bot.send_help_for(ctx, thing_to_get_help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
-    return await self._help_formatter.send_help(ctx, help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 88, in send_help
-    await self.format_bot_help(ctx)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 427, in format_bot_help
-    await self.send_pages(ctx, pages, embed=False)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
-    "I couldn't send the help message to you in DM. "
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-[2019-11-13 23:05:46] [ERROR] red: Exception in command 'trivia'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
-    await destination.send(page)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-
-During handling of the above exception, another exception occurred:
-
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 177, in layton_solve
+    puzzle_id = puzzle_id[0]
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 201, in grab_puzzle
+    'id': puzzle_id,
+TypeError: can only concatenate str (not "tuple") to str
+[2019-11-16 03:09:12] [ERROR] red: Exception in command 'layton solve'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/trivia2/trivia.py", line 182, in trivia
-    await ctx.send_help()
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 71, in send_help
-    await self.bot.send_help_for(self, command)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
-    return await self._help_formatter.send_help(ctx, help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 106, in send_help
-    await self.format_command_help(ctx, help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 233, in format_command_help
-    await self.send_pages(ctx, pages, embed=False)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
-    "I couldn't send the help message to you in DM. "
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-[2019-11-13 23:15:48] [ERROR] red: Exception in command 'cryptic'
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 177, in layton_solve
+    puzzle = grab_puzzle(puzzle_id[0])
+IndexError: tuple index out of range
+[2019-11-16 03:10:59] [ERROR] red: Exception in command 'layton solve'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 57, in cryptic
-    ans_len = ', '.join([len(a) for a in ans.split()])
-TypeError: sequence item 0: expected str instance, int found
-[2019-11-13 23:21:20] [ERROR] red: Exception in command 'cryptic'
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 177, in layton_solve
+    puzzle = grab_puzzle(puzzle_id)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 201, in grab_puzzle
+    'URL': "https://layton.fandom.com/wiki/Puzzle:" + puzzle_id
+TypeError: can only concatenate str (not "tuple") to str
+[2019-11-16 03:11:20] [ERROR] red: Exception in command 'layton solve'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 63, in cryptic
-    await ctx.send(text + "\n\n" + bold(f'{clue} ({ans_len})'))
-UnboundLocalError: local variable 'text' referenced before assignment
-[2019-11-13 23:22:26] [ERROR] red: Exception in command 'help'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 560, in send_pages
-    await destination.send(page)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-
-During handling of the above exception, another exception occurred:
-
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 178, in layton_solve
+    puzzle = grab_puzzle(puzzle_id)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 202, in grab_puzzle
+    'URL': "https://layton.fandom.com/wiki/Puzzle:" + puzzle_id
+TypeError: can only concatenate str (not "tuple") to str
+[2019-11-16 03:12:05] [ERROR] red: Exception in command 'layton solve'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 586, in red_help
-    await ctx.bot.send_help_for(ctx, thing_to_get_help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 176, in send_help_for
-    return await self._help_formatter.send_help(ctx, help_for)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 88, in send_help
-    await self.format_bot_help(ctx)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 427, in format_bot_help
-    await self.send_pages(ctx, pages, embed=False)
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/help.py", line 564, in send_pages
-    "I couldn't send the help message to you in DM. "
-  File "/usr/local/lib/python3.7/site-packages/redbot/core/commands/context.py", line 64, in send
-    return await super().send(content=content, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/discord/abc.py", line 823, in send
-    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
-  File "/usr/local/lib/python3.7/site-packages/discord/http.py", line 218, in request
-    raise Forbidden(r, data)
-discord.errors.Forbidden: 403 FORBIDDEN (error code: 50013): Missing Permissions
-[2019-11-14 21:08:51] [ERROR] red: Exception in command 'cryptic'
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 178, in layton_solve
+    puzzle = grab_puzzle(puzzle_id[0])
+IndexError: tuple index out of range
+[2019-11-16 03:12:30] [ERROR] red: Exception in command 'layton'
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
     ret = await coro(*args, **kwargs)
-  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/cryptic/cryptic.py", line 72, in cryptic
-    text = random.choice(STARTING_TEXTS)
-NameError: name 'STARTING_TEXTS' is not defined
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 65, in layton
+    if self._current_puzzle is None or 'set_answer' not in self._current_puzzle:
+TypeError: argument of type 'bool' is not iterable
+[2019-11-16 03:13:28] [ERROR] red: Exception in command 'layton solve'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 178, in layton_solve
+    puzzle = grab_puzzle(puzzle_id[0])
+IndexError: tuple index out of range
+[2019-11-16 23:49:06] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/__init__.py", line 1, in <module>
+    from .layton import Layton
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 49, in <module>
+    class Layton(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 164, in Layton
+    @cryptic.command(name='modview')
+NameError: name 'cryptic' is not defined
+[2019-11-16 23:58:25] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 76, in layton
+    self._current_puzzle = grab_puzzle(id_)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 296, in grab_puzzle
+    puzzle_dict['solution'] = '\n'.join(sol_txts).split('A big thanks to')[0].split('UK Version')[0].split('UK Version')[1]
+IndexError: list index out of range
+[2019-11-16 23:59:53] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 76, in layton
+    self._current_puzzle = grab_puzzle(id_)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 298, in grab_puzzle
+    solution_txt = solution_txt.split('UK Version')[0].split('UK Version')[1]
+IndexError: list index out of range
+[2019-11-17 12:22:59] [ERROR] red: Exception in command 'layton solve'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 186, in layton_solve
+    puzzle = grab_puzzle(puzzle_id[0])
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 255, in grab_puzzle
+    puzzle_span = puzzle_soup.find('span', id='Puzzle').parent.parent
+AttributeError: 'NoneType' object has no attribute 'parent'
+[2019-11-17 12:50:55] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/__init__.py", line 1, in <module>
+    from .layton import Layton
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 49, in <module>
+    class Layton(commands.Cog):
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 202, in Layton
+    @layton.commands(name='hint')
+TypeError: 'set' object is not callable
+[2019-11-17 12:52:09] [ERROR] red: Exception in command 'layton hint'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 208, in layton_hint
+    if not hints:
+NameError: name 'hints' is not defined
+[2019-11-17 12:59:43] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 76, in layton
+    self._current_puzzle = grab_puzzle(id_)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 367, in grab_puzzle
+    hint_list + (i + 1, hint),
+TypeError: can only concatenate list (not "tuple") to list
+[2019-11-17 13:00:01] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 87, in layton
+    if self._current_puzzles['hints']:
+AttributeError: 'Layton' object has no attribute '_current_puzzles'
+[2019-11-17 13:13:37] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/__init__.py", line 1, in <module>
+    from .layton import Layton
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 223
+    async def layton_setanswer(self, ctx: commands.Context, *puzzle_id: str, *answer: str):
+                                                                             ^
+SyntaxError: invalid syntax
+[2019-11-17 13:16:39] [ERROR] red: Exception in command 'layton setanswer'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 238, in layton_setanswer
+    puzzles = yaml.safe_dump(self._puzzles, f)
+  File "/usr/local/lib/python3.7/site-packages/yaml/__init__.py", line 306, in safe_dump
+    return dump_all([data], stream, Dumper=SafeDumper, **kwds)
+  File "/usr/local/lib/python3.7/site-packages/yaml/__init__.py", line 278, in dump_all
+    dumper.represent(data)
+  File "/usr/local/lib/python3.7/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 54, in serialize
+    self.serialize_node(node, None, None)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 108, in serialize_node
+    self.serialize_node(value, node, key)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 98, in serialize_node
+    self.serialize_node(item, node, index)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 90, in serialize_node
+    style=node.style))
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 115, in emit
+    self.state()
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 393, in expect_first_block_mapping_key
+    return self.expect_block_mapping_key(first=True)
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 403, in expect_block_mapping_key
+    self.expect_node(mapping=True, simple_key=True)
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 244, in expect_node
+    self.expect_scalar()
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 268, in expect_scalar
+    self.process_scalar()
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 533, in process_scalar
+    self.write_plain(self.analysis.scalar, split)
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 1132, in write_plain
+    self.stream.write(data)
+io.UnsupportedOperation: not writable
+[2019-11-17 13:18:39] [ERROR] red: Exception in command 'layton setanswer'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 238, in layton_setanswer
+    puzzles = yaml.safe_dump(self._puzzles, f)
+  File "/usr/local/lib/python3.7/site-packages/yaml/__init__.py", line 306, in safe_dump
+    return dump_all([data], stream, Dumper=SafeDumper, **kwds)
+  File "/usr/local/lib/python3.7/site-packages/yaml/__init__.py", line 278, in dump_all
+    dumper.represent(data)
+  File "/usr/local/lib/python3.7/site-packages/yaml/representer.py", line 28, in represent
+    self.serialize(node)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 54, in serialize
+    self.serialize_node(node, None, None)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 108, in serialize_node
+    self.serialize_node(value, node, key)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 98, in serialize_node
+    self.serialize_node(item, node, index)
+  File "/usr/local/lib/python3.7/site-packages/yaml/serializer.py", line 90, in serialize_node
+    style=node.style))
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 115, in emit
+    self.state()
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 393, in expect_first_block_mapping_key
+    return self.expect_block_mapping_key(first=True)
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 403, in expect_block_mapping_key
+    self.expect_node(mapping=True, simple_key=True)
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 244, in expect_node
+    self.expect_scalar()
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 268, in expect_scalar
+    self.process_scalar()
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 533, in process_scalar
+    self.write_plain(self.analysis.scalar, split)
+  File "/usr/local/lib/python3.7/site-packages/yaml/emitter.py", line 1132, in write_plain
+    self.stream.write(data)
+io.UnsupportedOperation: not writable
+[2019-11-17 13:55:33] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 84, in layton
+    continue_ = await self.wait_for_answer(answers, 1, 900)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 119, in wait_for_answer
+    "message", check=self.check_answer(answers), timeout=delay
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 137, in check_answer
+    answers = [ans.lower() for ans in answers]
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 137, in <listcomp>
+    answers = [ans.lower() for ans in answers]
+AttributeError: 'int' object has no attribute 'lower'
