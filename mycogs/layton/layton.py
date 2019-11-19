@@ -75,17 +75,18 @@ class Layton(commands.Cog):
             answers = [ans for ans in self._puzzles[id_] if ans not in ('', None)]
             self._current_puzzle = grab_puzzle(id_)
             if not self._current_puzzle:
-                await ctx.send("I've failed to retrieve a puzzle. Please try again in a minute.")
+                await ctx.send("I've failed to retrieve a puzzle. Please try again.")
                 return
             await ctx.send(get_puzzle_text(self._current_puzzle))
+            text = ''
+            if self._current_puzzle['hints']:
+                text = "There are hints available for this puzzle. Type \"?layton hint\" to see one.\n"
             if answers:
                 self._current_puzzle['set_answer'] = True
-                await ctx.send("If you answer correctly below, you'll get {} Picarats!".format(self._current_puzzle['picarats']))
-                continue_ = await self.wait_for_answer(answers, 1, 900)
+                await ctx.send(text + "If you answer correctly below, you'll get {} Picarats!".format(self._current_puzzle['picarats']))
+                continue_ = await self.wait_for_answer(ctx, answers, 1, 900)
             else:
-                text = f"Type \"?layton solve\" to check your answer! Stay tuned for interactive answering system and picarat rewards!"
-                if self._current_puzzle['hints']:
-                    text = "There are hints available for this puzzle. Type \"?layton hint\" to see one.\n" + text
+                text += f"This puzzle is not interactive (yet?). Type \"?layton solve\" to check your answer!"
                 await ctx.send(text)
                 # await ctx.send(f"This puzzle does not have an interactive solution. Type \"?layton solve {self._current_puzzle['id']}\" to check your answer!")
         else:
@@ -94,7 +95,7 @@ class Layton(commands.Cog):
             text = "You have one puzzle in progress: **" + self._current_puzzle['id'] + "**. Stuck? Type \"?layton hint\" for a hint, or \"?layton solve\" to get the solution!"
             await ctx.send(text + "\n\n" + self._current_puzzle['puzzle'] + "\n" + self._current_puzzle['image'])
     
-    async def wait_for_answer(self, answers, delay: float, timeout: float):
+    async def wait_for_answer(self, ctx, answers, delay: float, timeout: float):
         """Wait for a correct answer, and then respond.
 
         Returns False if waiting was cancelled; this is usually due to the
@@ -122,13 +123,13 @@ class Layton(commands.Cog):
                 continue
             else:
                 puzzle = self._current_puzzle
-                self._current_puzzle = None
                 solution = puzzle['solution']
                 title = puzzle['title']
                 sol_imgs = puzzle['solution_images']
                 await ctx.send(f"\"{random.choice(_SUCCESS_SOUNDBITES)}\"\n\n**{title} - Solution**\n{solution}!\n" + '\n'.join(sol_imgs))
-                await self.ctx.send(f"You got it, {message.author.display_name}! For solving " + self._current_puzzle['id'] +
-                                    f"you have earned {self._current_puzzle['picarats']}!")
+                await ctx.send(f"You got it, {message.author.display_name}! For solving " + puzzle['id'] +
+                                    f", you have earned {puzzle['picarats']} picarats!")
+                self._current_puzzle = None
                 return True
         # await self.ctx.send("Layton's wait-for-answer function was force-stopped.")
         return True
@@ -141,7 +142,7 @@ class Layton(commands.Cog):
                 return False
             guess = message.content.lower()
             guess = normalize_smartquotes(guess)
-            return any([guess == ans for ans in answers)
+            return any([guess == ans for ans in answers])
         return _pred
 
     @layton.command(name="help")
@@ -186,7 +187,7 @@ class Layton(commands.Cog):
         if not puzzle_id:
             puzzle = self._current_puzzle
         else:
-            if puzzle_id not in self._puzzles:
+            if puzzle_id[0] not in self._puzzles.keys():
                 await ctx.send("Invalid puzzle ID.")
                 return
             puzzle = grab_puzzle(puzzle_id[0])
@@ -320,7 +321,7 @@ def grab_puzzle(puzzle_id):
     s = time.time()
     cur = puzzle_text_span
     while time.time() - s < 0.1:
-        t = cur.find_next(['p', 'h2'])
+        t = cur.find_next(['p', 'h2', 'li', 'dt'])
         if t is None:
             break
         txt = t.get_text()
@@ -335,7 +336,7 @@ def grab_puzzle(puzzle_id):
     # Get solutions
     puz_txt = '\n'.join(puzzle_txts)
     if 'US Version' in puz_txt:
-        puz_txt = puz_txt.split('US Version\n')[1].split('UK Version\n')[0]
+        puz_txt = puz_txt.split('UK Version\n')[0]
     puzzle_dict['puzzle'] = puz_txt
 
     # Get puzzle title
@@ -360,7 +361,7 @@ def grab_puzzle(puzzle_id):
     
     solution_txt = '\n'.join(sol_txts).split('A big thanks to')[0]
     if 'US Version' in solution_txt:
-        solution_txt = solution_txt.split('UK Version')[0].split('US Version')[1]
+        solution_txt = solution_txt.split('UK Version')[0]
     puzzle_dict['solution'] = solution_txt
 
     # Get solution image
@@ -377,9 +378,10 @@ def grab_puzzle(puzzle_id):
                 sol_imgs += iurl,
             cur = i
         except:
+            break
             continue
     else:
-        return None
+        return False
     puzzle_dict['solution_images'] = sol_imgs
 
     # Get hints

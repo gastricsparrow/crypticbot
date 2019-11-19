@@ -314,3 +314,57 @@ Traceback (most recent call last):
   File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 137, in <listcomp>
     answers = [ans.lower() for ans in answers]
 AttributeError: 'int' object has no attribute 'lower'
+[2019-11-17 14:01:51] [ERROR] red: Package loading failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/core_commands.py", line 106, in _load
+    await bot.load_extension(spec)
+  File "/usr/local/lib/python3.7/site-packages/redbot/core/bot.py", line 293, in load_extension
+    lib = spec.loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 407, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 907, in load_module
+  File "<frozen importlib._bootstrap_external>", line 732, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/__init__.py", line 1, in <module>
+    from .layton import Layton
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 144
+    return any([guess == ans for ans in answers)
+                                               ^
+SyntaxError: invalid syntax
+[2019-11-17 14:02:17] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 84, in layton
+    continue_ = await self.wait_for_answer(answers, 1, 900)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 129, in wait_for_answer
+    await ctx.send(f"\"{random.choice(_SUCCESS_SOUNDBITES)}\"\n\n**{title} - Solution**\n{solution}!\n" + '\n'.join(sol_imgs))
+NameError: name 'ctx' is not defined
+[2019-11-17 14:12:29] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 84, in layton
+    continue_ = await self.wait_for_answer(answers, 1, 900)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 129, in wait_for_answer
+    await self.ctx.send(f"\"{random.choice(_SUCCESS_SOUNDBITES)}\"\n\n**{title} - Solution**\n{solution}!\n" + '\n'.join(sol_imgs))
+NameError: name 'ctx' is not defined
+[2019-11-17 14:28:27] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 84, in layton
+    self._current_puzzle['set_answer'] = True
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 130, in wait_for_answer
+    await ctx.send(f"You got it, {message.author.display_name}! For solving " + self._current_puzzle['id'] +
+TypeError: 'NoneType' object is not subscriptable
+[2019-11-18 14:40:51] [ERROR] red: Exception in command 'layton'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/discord/ext/commands/core.py", line 79, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/Users/vutheduc/Documents/Projects/PuzzleSoc/Social/Discord/CrypticBot/mycogs/layton/layton.py", line 88, in layton
+    text += f"This puzzle is not interactive (yet?). Type \"?layton solve\" to check your answer!"
+UnboundLocalError: local variable 'text' referenced before assignment
