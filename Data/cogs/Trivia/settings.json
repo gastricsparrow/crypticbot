@@ -10,14 +10,14 @@
             },
             "560352591234465793": {
                 "226378264828968961": {
-                    "wins": 28,
-                    "games": 88,
-                    "total_score": 534
+                    "wins": 34,
+                    "games": 102,
+                    "total_score": 650
                 },
                 "378413022798151681": {
-                    "wins": 18,
-                    "games": 67,
-                    "total_score": 436
+                    "wins": 27,
+                    "games": 82,
+                    "total_score": 551
                 },
                 "202428607610486786": {
                     "wins": 4,
@@ -30,9 +30,9 @@
                     "total_score": 86
                 },
                 "252062256177741835": {
-                    "wins": 4,
-                    "games": 7,
-                    "total_score": 48
+                    "wins": 5,
+                    "games": 8,
+                    "total_score": 58
                 },
                 "223690990882390017": {
                     "wins": 26,
@@ -43,6 +43,11 @@
                     "wins": 0,
                     "games": 1,
                     "total_score": 7
+                },
+                "172115093260075009": {
+                    "wins": 0,
+                    "games": 3,
+                    "total_score": 5
                 }
             }
         },
